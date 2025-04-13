@@ -12,84 +12,60 @@ export default function TabTwoScreen() {
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
       headerImage={
-        <IconSymbol
-          size={310}
-          color="#808080"
-          name="chevron.left.forwardslash.chevron.right"
+        <Image
+          source={require('@/assets/images/image.png')} // image path
           style={styles.headerImage}
         />
       }>
+
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Explore</ThemedText>
+        <ThemedText type="title">📩 SMS Spam Detector</ThemedText>
       </ThemedView>
-      <ThemedText>This app includes example code to help you get started.</ThemedText>
-      <Collapsible title="File-based routing">
+
+      <ThemedText>
+        This app uses machine learning to detect whether an SMS message is spam or not. By simply entering any SMS message, the app will analyze the text and provide feedback on whether it's spam. The app uses a trained model to analyze patterns in the SMS, such as certain keywords or structures commonly found in spam messages, to determine if the message is spam.
+      </ThemedText>
+
+      <ThemedText>
+        To use the app, simply type or paste an SMS message in the input field and press the "Check Spam" button. The app will then check the message and display the result, letting you know whether it's spam or not. It’s a quick and easy way to keep your inbox clean!
+      </ThemedText>
+
+      <ThemedText>
+        The app connects to a backend built with Flask and utilizes a machine learning model to process and classify SMS messages in real-time. This ensures that users can get accurate and fast results on whether their SMS messages are spam.
+      </ThemedText>
+
+      <ThemedText>
+        This app is compatible with Android, iOS, and web platforms. You can use the same functionality on any device, making it easy to check SMS messages for spam across different platforms. Whether you're on a phone or browsing on the web, the app works seamlessly.
+      </ThemedText>
+
+      <ThemedText>
+        Additionally, the app provides support for static images. You can use image suffixes like <ThemedText type="defaultSemiBold">@2x</ThemedText> and <ThemedText type="defaultSemiBold">@3x</ThemedText> to provide files for different screen densities. The app also supports custom fonts, and you can modify the layout to add custom fonts such as <ThemedText style={{ fontFamily: 'SpaceMono' }}>SpaceMono</ThemedText>.
+      </ThemedText>
+
+      <ThemedText>
+        The app adjusts its UI based on light and dark modes, ensuring that it provides a comfortable viewing experience regardless of the user’s preferred theme.
+      </ThemedText>
+
+      <ThemedText>
+        The app also includes animations for a smoother user experience. For example, the app uses a <ThemedText type="defaultSemiBold">ParallaxScrollView</ThemedText> component to create a parallax effect for the header image, providing a visually engaging experience for users on iOS.
+      </ThemedText>
+
+      <Collapsible title="How it works">
         <ThemedText>
-          This app has two screens:{' '}
-          <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> and{' '}
-          <ThemedText type="defaultSemiBold">app/(tabs)/explore.tsx</ThemedText>
+          The app uses a trained machine learning model to detect spam in SMS messages based on common spam patterns.
         </ThemedText>
+      </Collapsible>
+
+      <Collapsible title="How to use the app">
         <ThemedText>
-          The layout file in <ThemedText type="defaultSemiBold">app/(tabs)/_layout.tsx</ThemedText>{' '}
-          sets up the tab navigator.
+          Simply input an SMS message and click the "Check Spam" button to determine if the message is spam.
         </ThemedText>
-        <ExternalLink href="https://docs.expo.dev/router/introduction">
-          <ThemedText type="link">Learn more</ThemedText>
+      </Collapsible>
+
+      <Collapsible title="Learn more">
+        <ExternalLink href="https://github.com/adarshsuman-0707/smsSpam">
+          <ThemedText type="link">Learn more about Sms Spam Detection</ThemedText>
         </ExternalLink>
-      </Collapsible>
-      <Collapsible title="Android, iOS, and web support">
-        <ThemedText>
-          You can open this project on Android, iOS, and the web. To open the web version, press{' '}
-          <ThemedText type="defaultSemiBold">w</ThemedText> in the terminal running this project.
-        </ThemedText>
-      </Collapsible>
-      <Collapsible title="Images">
-        <ThemedText>
-          For static images, you can use the <ThemedText type="defaultSemiBold">@2x</ThemedText> and{' '}
-          <ThemedText type="defaultSemiBold">@3x</ThemedText> suffixes to provide files for
-          different screen densities
-        </ThemedText>
-        <Image source={require('@/assets/images/react-logo.png')} style={{ alignSelf: 'center' }} />
-        <ExternalLink href="https://reactnative.dev/docs/images">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
-      </Collapsible>
-      <Collapsible title="Custom fonts">
-        <ThemedText>
-          Open <ThemedText type="defaultSemiBold">app/_layout.tsx</ThemedText> to see how to load{' '}
-          <ThemedText style={{ fontFamily: 'SpaceMono' }}>
-            custom fonts such as this one.
-          </ThemedText>
-        </ThemedText>
-        <ExternalLink href="https://docs.expo.dev/versions/latest/sdk/font">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
-      </Collapsible>
-      <Collapsible title="Light and dark mode components">
-        <ThemedText>
-          This template has light and dark mode support. The{' '}
-          <ThemedText type="defaultSemiBold">useColorScheme()</ThemedText> hook lets you inspect
-          what the user's current color scheme is, and so you can adjust UI colors accordingly.
-        </ThemedText>
-        <ExternalLink href="https://docs.expo.dev/develop/user-interface/color-themes/">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
-      </Collapsible>
-      <Collapsible title="Animations">
-        <ThemedText>
-          This template includes an example of an animated component. The{' '}
-          <ThemedText type="defaultSemiBold">components/HelloWave.tsx</ThemedText> component uses
-          the powerful <ThemedText type="defaultSemiBold">react-native-reanimated</ThemedText>{' '}
-          library to create a waving hand animation.
-        </ThemedText>
-        {Platform.select({
-          ios: (
-            <ThemedText>
-              The <ThemedText type="defaultSemiBold">components/ParallaxScrollView.tsx</ThemedText>{' '}
-              component provides a parallax effect for the header image.
-            </ThemedText>
-          ),
-        })}
       </Collapsible>
     </ParallaxScrollView>
   );
@@ -97,10 +73,11 @@ export default function TabTwoScreen() {
 
 const styles = StyleSheet.create({
   headerImage: {
-    color: '#808080',
-    bottom: -90,
-    left: -35,
+    width: '100%', 
+    height: '100%', 
+    resizeMode: 'cover', 
     position: 'absolute',
+    borderRadius: 10,
   },
   titleContainer: {
     flexDirection: 'row',
