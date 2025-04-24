@@ -1,6 +1,5 @@
-# Welcome to your Expo app 👋
+# Welcome to your SmsSpamApp app 👋
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
 ## Get started
 
@@ -48,3 +47,17 @@ Join our community of developers creating universal apps.
 
 - [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
 - [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+
+Easily run the build command in terminal and Made your app then install in your mobile
+
+ after the installation you  give the some permission like sms read permission receive permission for this application is applicable and after that this have working like reading a current SMS in a real time 
+  this app is detect the current SMS is spam or ham  
+  if message is spam so it generating alert
+  and creating a list of prime messages
+  there are too less generate first list representing a receive SMS messages and second messages
+  in this every also providing a manual facility where is the easily check the message is spam or not 
+  and get a result time 
+
+  and the backend is host on a render  server
+  and the backend implemented in python using deep learning and flash api 
+  which is checking the spam messages and generating a prediction result ...
